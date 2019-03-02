@@ -48,3 +48,20 @@ const dogBreed = (dogName) => {
 
 console.log(dogBreed('lab'));
 console.log(dogBreed('a cat'));
+
+// const dogBreedDiv = document.getElementById('dog-breeds');
+// dogBreedDiv.innerHTML = dogBreed('lab');
+
+// const nuggetizerDiv = document.getElementById('nuggetizer');
+// nuggetizerDiv.innerHTML = nuggetizer('bear');
+// nuggetizerDiv.innerHTML += nuggetizer('kitten');
+
+const printToDom = (divId, textToPrint) => {
+  const selectedDiv = document.getElementById(divId);
+  selectedDiv.innerHTML += textToPrint;
+};
+
+printToDom('dog-breeds', dogBreed('lab'))
+printToDom('nuggetizer', nuggetizer('bear'));
+printToDom('nuggetizer', nuggetizer('kitten'));
+printToDom('nuggetizer', 'mmmmmmmmmmmm');
