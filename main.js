@@ -48,3 +48,40 @@ const dogBreed = (dogName) => {
 
 console.log(dogBreed('lab'));
 console.log(dogBreed('a cat'));
+
+// const dogBreedDiv = document.getElementById('dog-breeds');
+// dogBreedDiv.innerHTML = dogBreed('lab');
+
+// const nuggetizerDiv = document.getElementById('nuggetizer');
+// nuggetizerDiv.innerHTML = nuggetizer('bear');
+// nuggetizerDiv.innerHTML += nuggetizer('kitten');
+
+const printToDom = (divId, textToPrint) => {
+  const selectedDiv = document.getElementById(divId);
+  selectedDiv.innerHTML += textToPrint;
+};
+
+printToDom('dog-breeds', dogBreed('lab'))
+printToDom('nuggetizer', nuggetizer('bear'));
+printToDom('nuggetizer', nuggetizer('kitten'));
+printToDom('nuggetizer', 'mmmmmmmmmmmm');
+
+
+let bandNumber = 1;
+const addBand = (bandName) => {
+  // do stuff
+  // get band
+  // text to send
+  const bandText = `<h5>${bandNumber}. ${bandName}</h5>`;
+  // modify band number
+  bandNumber = bandNumber + 1;
+  printToDom('band-list', bandText);
+}
+
+
+addBand('Metalica') // 1. Metalica
+addBand('slayer')  // 2. Slayer
+addBand('b')
+addBand('c')
+addBand('d')
+addBand('e')
