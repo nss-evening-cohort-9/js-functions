@@ -27,3 +27,24 @@ namePrinter('John', 'Doe');
 namePrinter('Ames', 'Zoe');
 
 namePrinter(1,2);
+
+
+
+const nuggetizer = (animal) => {
+  return `processed ${animal}`;
+};
+
+console.log(nuggetizer('pig'));
+console.log(nuggetizer('fish'));
+console.log(nuggetizer('chicken'));
+console.log(nuggetizer('student'));
+
+// 1 input  string  'border collie'
+// output = my favorite dog breed is border collie
+
+const dogBreed = (dogName) => {
+  return `my favorite dog breed is ${dogName}`;
+};
+
+console.log(dogBreed('lab'));
+console.log(dogBreed('a cat'));
